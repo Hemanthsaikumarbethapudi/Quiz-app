@@ -1,0 +1,18 @@
+.App{
+    height: 100vh;
+    display: flex;
+    background-color: navy;
+    color: white;
+}
+.main{
+    width:75%;
+    background:  url("./assets/bg.jpg") center ;
+}
+.pyramid{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+.moneylist{
+    list-style: none;
+}
