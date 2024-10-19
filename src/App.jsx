@@ -2,6 +2,20 @@
 // import './App.css';
 import "./style.css";
 function App() {
+  const moneyPyramid = [
+    { id: 1, amount: 100 },
+    { id: 2, amount: 200 },
+    { id: 3, amount: 300 },
+    { id: 4, amount: 400 },
+    { id: 5, amount: 500 },
+    { id: 6, amount: 600 },
+    { id: 7, amount: 700 },
+    { id: 8, amount: 800 },
+    { id: 9, amount: 900 },
+    { id: 10, amount: 1000 },
+    { id: 11, amount: 1200 },
+    { id: 12, amount: 1300 }
+  ].reverse();
   return (
     <div className="App">
       <div className="main">
@@ -9,56 +23,17 @@ function App() {
       </div>
       <div className="pyramid">
         <ul className="moneylist">
-          <li className="moneyListnum">
-            <span className="moneylistnum">10</span>
-            <span className="moneylistamo">$5000</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">9</span>
-            <span className="moneylistamo">$4000</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">8</span>
-            <span className="moneylistamo">$3000</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">7</span>
-            <span className="moneylistamo">$2000</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">6</span>
-            <span className="moneylistamo">$1000</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">5</span>
-            <span className="moneylistamo">$500</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">4</span>
-            <span className="moneylistamo">$400</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">3</span>
-            <span className="moneylistamo">$300</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">2</span>
-            <span className="moneylistamo">$200</span>
-          </li>
-          <li className="moneyListnum">
-            <span className="moneylistnum">1</span>
-            <span className="moneylistamo">$100</span>
-          </li>
-
-
-
-
-
-
+          {moneyPyramid.map((m) => (
+            <li className="moneyListnum">
+              <span className="moneylistnums">{m.id}</span>
+              <span className="moneylistamo">{m.amount}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
-  );
+
+  )
 }
 
 export default App;
